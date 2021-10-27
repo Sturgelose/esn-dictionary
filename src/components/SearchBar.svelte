@@ -1,0 +1,3 @@
+<template>
+	<input id='searchbar' onkeyup='search_animal()' type='text' name='search' placeholder='Search words..'>
+</template>
