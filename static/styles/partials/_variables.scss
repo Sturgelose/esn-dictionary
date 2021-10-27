@@ -58,30 +58,30 @@ $rhythm: 1rem !default;
 $rhythm--x: $rhythm !default;
 $rhythm--y: $rhythm !default;
 $rhythms: (
-	0: (
-		x: 0,
-		y: 0
-	),
-	1: (
-		x: $rhythm--x,
-		y: $rhythm--y
-	),
-	2: (
-		x: (
-			$rhythm--x * 1.5
-		),
-		y: (
-			$rhythm--y * 1.5
-		)
-	),
-	3: (
-		x: (
-			$rhythm--x * 3
-		),
-		y: (
-			$rhythm--y * 3
-		)
-	)
+    0: (
+        x: 0,
+        y: 0,
+    ),
+    1: (
+        x: $rhythm--x,
+        y: $rhythm--y,
+    ),
+    2: (
+        x: (
+            $rhythm--x * 1.5,
+        ),
+        y: (
+            $rhythm--y * 1.5,
+        ),
+    ),
+    3: (
+        x: (
+            $rhythm--x * 3,
+        ),
+        y: (
+            $rhythm--y * 3,
+        ),
+    ),
 ) !default;
 $border__width: 1px !default;
 
@@ -95,7 +95,10 @@ $font__family--blog: ''; // Update with a font of your choice
 $font__family--monospace: Menlo, Monaco, Consolas, 'Courier New', monospace;
 $font__fallback: Helvetica Neue, Helvetica, Arial, sans-serif;
 
-@include font-face($font__family--headings, '../fonts/#{$font__family--headings}');
+@include font-face(
+    $font__family--headings,
+    '../fonts/#{$font__family--headings}'
+);
 @include font-face($font__family--body, '../fonts/#{$font__family--body}');
 @include font-face($font__family--blog, '../fonts/#{$font__family--blog}');
 
@@ -143,23 +146,23 @@ $button__padding--y: 0.5rem !default;
 // =============================================================================
 
 $grid__breakpoints: (
-	// Extra small screen / phone
-	xs: 0,
-	// Small screen / phone
-	sm: 544px,
-	// Medium screen / tablet
-	md: 768px,
-	// Large screen / desktop
-	lg: 992px,
-	// Extra large screen / wide desktop
-	xl: 1200px
+    // Extra small screen / phone
+    xs: 0,
+    // Small screen / phone
+    sm: 544px,
+    // Medium screen / tablet
+    md: 768px,
+    // Large screen / desktop
+    lg: 992px,
+    // Extra large screen / wide desktop
+    xl: 1200px
 ) !default;
 
 $grid__container-widths: (
-	sm: 576px,
-	md: 720px,
-	lg: 940px,
-	xl: 1140px
+    sm: 576px,
+    md: 720px,
+    lg: 940px,
+    xl: 1140px,
 ) !default;
 
 $grid__columns: 12 !default;
