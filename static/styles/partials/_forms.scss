@@ -2,9 +2,8 @@
 // Forms
 // =============================================================================
 
-input[type="text"] {
+input[type='text'] {
 	line-height: $rhythm--y;
-	border-width: 2*$border__width;
-    padding: unquote("calc(.5rem - #{$border__width})");
+	border-width: 2 * $border__width;
+	padding: unquote('calc(.5rem - #{$border__width})');
 }
-

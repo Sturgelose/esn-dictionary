@@ -11,7 +11,7 @@
 // =============================================================================
 
 section {
-  background: linear-gradient(transparent, rgba(0,0,0,.025)); // Todo move somewhere else
+	background: linear-gradient(transparent, rgba(0, 0, 0, 0.025)); // Todo move somewhere else
 }
 
 /* // Todo delete
@@ -37,21 +37,22 @@ section {
 }
 */
 
-.fullscreen { // Todo delete
-  position: relative;
-  min-height: 100vh;
-  overflow: hidden;
-  &--half {
-    min-height: 50vh;
-  }
-  &__content {
-    @include media-breakpoint-up(lg) {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 100%;
-    }
-  }
+.fullscreen {
+	// Todo delete
+	position: relative;
+	min-height: 100vh;
+	overflow: hidden;
+	&--half {
+		min-height: 50vh;
+	}
+	&__content {
+		@include media-breakpoint-up(lg) {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			width: 100%;
+		}
+	}
 }
 
 // =============================================================================
@@ -59,20 +60,20 @@ section {
 // =============================================================================
 
 .position {
-  position: absolute;
-  width: 100%;
-  &--venter {
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  &--bottom {
-    padding-bottom: 1rem;
-    bottom: 0%;
-  }
-  &--top {
-    padding-top: 1rem;
-    top: 0%; 
-  }
+	position: absolute;
+	width: 100%;
+	&--venter {
+		top: 50%;
+		transform: translateY(-50%);
+	}
+	&--bottom {
+		padding-bottom: 1rem;
+		bottom: 0%;
+	}
+	&--top {
+		padding-top: 1rem;
+		top: 0%;
+	}
 }
 
 // =============================================================================
@@ -80,33 +81,30 @@ section {
 // =============================================================================
 
 .flex {
-  display: flex;
-  align-items: stretch;
-  justify-content: space-between;
-  flex-direction: column;
-  &__content {
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    justify-content: center;
-    &--top {
-      //margin-top: $rhythm--y;
-    }
-    &--bottom {
-      //margin-bottom: $rhythm--y;
-      margin-top: auto; // Todo watch out
-    }
-  }
-  &--center {
-    align-self: center;
-  }
-  &--start {
-    align-self: flex-start;
-  }
-  &--end {
-    align-self: flex-end;
-  }
+	display: flex;
+	align-items: stretch;
+	justify-content: space-between;
+	flex-direction: column;
+	&__content {
+		display: flex;
+		flex: 1;
+		flex-direction: column;
+		justify-content: center;
+		&--top {
+			//margin-top: $rhythm--y;
+		}
+		&--bottom {
+			//margin-bottom: $rhythm--y;
+			margin-top: auto; // Todo watch out
+		}
+	}
+	&--center {
+		align-self: center;
+	}
+	&--start {
+		align-self: flex-start;
+	}
+	&--end {
+		align-self: flex-end;
+	}
 }
-
-
-

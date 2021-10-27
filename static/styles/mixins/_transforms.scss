@@ -2,8 +2,9 @@
 // Transforms
 // =============================================================================
 
-@mixin transform($args...) { // Todo replace with autoprefixer
+@mixin transform($args...) {
+	// Todo replace with autoprefixer
 	-webkit-transform: $args;
-        -ms-transform: $args;
-            transform: $args;
+	-ms-transform: $args;
+	transform: $args;
 }

@@ -10,16 +10,16 @@
 */
 
 // Mixins and Variables
-@import "mixins/mixins";
-@import "partials/variables";
+@import 'mixins/mixins';
+@import 'partials/variables';
 
 // Reset and print
-@import "partials/normalize";
-@import "partials/print";
+@import 'partials/normalize';
+@import 'partials/print';
 
 // Core styles
-@import "partials/reboot";
-@import "partials/typography";
+@import 'partials/reboot';
+@import 'partials/typography';
 //@import "partials/grid";
 //@import "partials/layout";
 //@import "partials/parallax";
@@ -35,7 +35,7 @@
 //@import "partials/forms";
 
 // Utilities
-@import "partials/utilities";
+@import 'partials/utilities';
 
 // ...
 
