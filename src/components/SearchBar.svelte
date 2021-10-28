@@ -17,4 +17,11 @@
         border-width: 2 * $border__width;
         padding: unquote('calc(.5rem - #{$border__width})');
     }
+
+    #searchbar {
+        width: 80%;
+        display: block;
+        text-align: center;
+        margin: 50px auto auto;
+    }
 </style>
