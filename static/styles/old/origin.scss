@@ -14,31 +14,20 @@
 
 // Reset and print
 @import 'partials/normalize';
-@import 'partials/print';
 
 // Core styles
 @import 'partials/reboot';
 @import 'partials/typography';
 @import 'partials/grid';
-@import 'partials/layout';
-//@import "partials/parallax";
 
 // Components
 @import 'partials/buttons';
-@import 'partials/nav';
-@import 'partials/navbar';
-@import 'partials/burger'; // Todo resolve
 @import 'partials/card';
-@import 'partials/code';
 @import 'partials/elements';
-@import 'partials/alerts';
 @import 'partials/animations';
-@import 'partials/forms';
-@import 'partials/dictionary';
 
 // Utilities
 @import 'partials/utilities';
-@import 'partials/wireframe';
 
 // ...
 

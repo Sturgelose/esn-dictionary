@@ -4,6 +4,7 @@
     import Navbar from '../components/Navbar.svelte'
     import Welcome from '../components/Welcome.svelte'
     import Anchor from '../components/Anchor.svelte'
+    import SearchBar from '../components/SearchBar.svelte'
 
     let dictionaryEntries: Array<DictionaryEntry> = []
 
@@ -43,6 +44,8 @@
 
     <div class="row dictionary">
         <div class="col-lg-6 col-lg-push-3 rhythm">
+            <SearchBar />
+
             {#await dictionaryEntries}
                 <p>...waiting</p>
             {:then data}
@@ -60,7 +63,7 @@
 </template>
 
 <style lang="scss" global>
-    @import 'static/styles/origin';
+    @import 'static/styles/old/origin';
 
     #search {
         width: 80%;
