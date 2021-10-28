@@ -41,30 +41,22 @@
 
     <Navbar />
 
-    <section class="dictionary">
-        <div class="container">
-            <div class="row">
-                <anchor name="a" />
-                <div
-                    id="dictionary__entries"
-                    class="col-lg-6 col-lg-push-3 rhythm"
-                >
-                    {#await dictionaryEntries}
-                        <p>...waiting</p>
-                    {:then data}
-                        {#each dictionaryEntries as entry, i}
-                            {#if entry.anchor}
-                                <Anchor character={entry.anchor} />
-                            {/if}
-                            <DictionaryEntry {entry} />
-                        {/each}
-                    {:catch error}
-                        <p>An error occurred!</p>
-                    {/await}
-                </div>
-            </div>
+    <div class="row dictionary">
+        <div class="col-lg-6 col-lg-push-3 rhythm">
+            {#await dictionaryEntries}
+                <p>...waiting</p>
+            {:then data}
+                {#each dictionaryEntries as entry, i}
+                    {#if entry.anchor}
+                        <Anchor character={entry.anchor} />
+                    {/if}
+                    <DictionaryEntry {entry} />
+                {/each}
+            {:catch error}
+                <p>An error occurred!</p>
+            {/await}
         </div>
-    </section>
+    </div>
 </template>
 
 <style lang="scss" global>
