@@ -19,7 +19,8 @@
     }
 
     #searchbar {
-        width: 80%;
+        max-width: 500px;
+        width: 75%;
         display: block;
         text-align: center;
         margin: 50px auto auto;

@@ -95,12 +95,13 @@ $font__family--blog: ''; // Update with a font of your choice
 $font__family--monospace: Menlo, Monaco, Consolas, 'Courier New', monospace;
 $font__fallback: Helvetica Neue, Helvetica, Arial, sans-serif;
 
-@include font-face(
-    $font__family--headings,
-    '../fonts/#{$font__family--headings}'
-);
-@include font-face($font__family--body, '../fonts/#{$font__family--body}');
-@include font-face($font__family--blog, '../fonts/#{$font__family--blog}');
+// TODO avoid using a mixin here!
+//@include font-face(
+//    $font__family--headings,
+//    '../fonts/#{$font__family--headings}'
+//);
+//@include font-face($font__family--body, '../fonts/#{$font__family--body}');
+//@include font-face($font__family--blog, '../fonts/#{$font__family--blog}');
 
 $font__size--root: 25px !default;
 $font__size--root-sm: 3.5vmin !default;

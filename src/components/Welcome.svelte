@@ -6,62 +6,87 @@
     <section class="welcome">
         <div class="image-background" />
         <div class="content">
-            <div class="container-fluid row">
-                <div class="col-xs-12">
-                    <h1 class="h1">ESNdictionary</h1>
-                    <h2 class="h5">
-                        Get to know all the ESN slang in one place.
-                    </h2>
-                    <p class="rhythm">
-                        Navigate by pressing a key on the keyboard or by using
-                        the menu on the left.
-                    </p>
-                    <a
-                        on:click={() =>
-                            animateScroll.scrollTo({
-                                element: '#anchor-a',
-                            })}
-                        class="button button--large button--secondary button--inverse"
-                        >Get started</a
-                    >
+            <div class="title">
+                <div class="fill" />
+                <h1 class="h1">ESNdictionary</h1>
+                <h2 class="h5">Get to know all the ESN slang in one place.</h2>
+                <p>
+                    Navigate by pressing a key on the keyboard or by using the
+                    menu on the left.
+                </p>
+                <div class="fill" />
+            </div>
+            <div
+                on:click={() =>
+                    animateScroll.scrollTo({
+                        element: '#anchor-a',
+                    })}
+                class="button button--secondary button--inverse"
+            >
+                Get started
+            </div>
+            <div
+                class="mouse-scroll"
+                on:click={() =>
+                    animateScroll.scrollTo({
+                        element: '#anchor-a',
+                    })}
+            >
+                <div class="mouse">
+                    <div class="mouse-movement" />
                 </div>
+                <span class="mouse-message">scroll</span>
             </div>
         </div>
-        <a
-            class="mouse-scroll"
-            on:click={() =>
-                animateScroll.scrollTo({
-                    element: '#anchor-a',
-                })}
-        >
-            <span class="mouse">
-                <span class="mouse-movement" />
-            </span>
-            <span class="mouse-message">scroll</span>
-        </a>
     </section>
 </template>
 
 <style lang="scss">
+    $border--radius: 0.25rem;
     $color-brand-primary: #2e3192;
     $color__text--inverse: rgba(255, 255, 255, 0.85) !default;
     $easing--secondary: cubic-bezier(0.25, 0.1, 0.25, 1) !default;
 
+    @keyframes scroll-ani {
+        0% {
+            opacity: 1;
+            top: 29%;
+        }
+        15% {
+            opacity: 1;
+            top: 50%;
+        }
+        50% {
+            opacity: 0;
+            top: 50%;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
     .welcome {
         color: $color__text--inverse;
-        overflow: hidden;
-        min-height: 100vh;
-        position: relative;
-        text-align: center;
         background-color: $color-brand-primary;
-        & * {
-            text-shadow: none !important;
-        }
+        min-height: 100vh;
+        margin-left: 1.5rem;
 
         .image-background {
+            z-index: 2;
             position: absolute;
-            width: 100%;
-            height: 100%;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
@@ -75,58 +100,92 @@
         }
 
         .content {
+            z-index: 3;
             position: absolute;
-            top: 50%;
-            width: 100%;
-            transform: translateY(-50%);
-        }
-    }
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            text-align: center;
 
-    .mouse-scroll {
-        position: absolute;
-        bottom: 2vh;
-        transform: translateX(-50%);
-
-        @media screen and (max-width: 992px) {
-            display: none;
-        }
-
-        .mouse {
-            position: relative;
-            display: block;
-            width: 30px;
-            height: 50px;
-            margin: 0 auto 20px;
-            -webkit-box-sizing: border-box;
-            -moz-box-sizing: border-box;
-            box-sizing: border-box;
-            border: 3px solid #fff;
-            border-radius: 23px;
-
-            .mouse-movement {
-                position: absolute;
-                display: block;
-                top: 29%;
-                left: 50%;
-                width: 8px;
-                height: 8px;
-                margin: -4px 0 0 -4px;
-                background: #fff;
-                border-radius: 50%;
-                animation: 'scroll-ani 3s linear infinite';
+            .title {
+                flex-basis: 70%;
+                display: flex;
+                flex-direction: column;
+                > * {
+                    margin: 1vh;
+                }
+                .fill {
+                    flex-grow: 1;
+                }
             }
-        }
+            .button {
+                max-width: 400px;
+                margin: auto auto 10vh;
+                border-radius: $border--radius;
+                line-height: 1rem;
+                font-weight: bolder;
+                text-transform: uppercase;
+                cursor: pointer;
+                letter-spacing: 0.1em;
+                transition: all 0.25s cubic-bezier(0.25, 0.1, 0.25, 1);
+                font-size: 0.75rem;
 
-        .mouse-message {
-            float: left;
-            color: transparent;
-            margin-top: -15px;
-            padding: 0;
-            animation: 'scroll-ani 3s linear infinite';
+                padding: 1em;
+                outline: 2px solid white;
 
-            // Only show message if we are hovering the parent
-            :hover > & {
-                color: white;
+                &:hover {
+                    background-color: white;
+                    color: #2e3192;
+                }
+            }
+            .mouse-scroll {
+                flex-basis: 30%;
+                height: 100%;
+
+                @media screen and (max-width: 992px) {
+                    display: none;
+                }
+
+                .mouse {
+                    margin: auto;
+                    width: 30px;
+                    height: 50px;
+
+                    position: relative;
+                    display: block;
+                    box-sizing: border-box;
+                    border: 3px solid #fff;
+                    border-radius: 23px;
+
+                    .mouse-movement {
+                        position: absolute;
+                        display: block;
+                        top: 29%;
+                        left: 50%;
+                        width: 8px;
+                        height: 8px;
+                        margin: -4px 0 0 -4px;
+                        background: #fff;
+                        border-radius: 50%;
+                        animation: scroll-ani 3s linear infinite;
+                    }
+                }
+
+                .mouse-message {
+                    color: white;
+                    display: none;
+                    margin-top: 1vh;
+                    animation: scroll-ani 3s linear infinite;
+                }
+
+                &:hover .mouse-message {
+                    display: block;
+                }
             }
         }
     }

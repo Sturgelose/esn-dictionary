@@ -29,14 +29,23 @@
     $border--radius: 0.25rem;
 
     .card {
-        padding-top: 1rem;
-        padding-bottom: 1rem;
+        position: relative;
+        background-color: white;
+        overflow: hidden;
+        border: none;
+        box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
+        transition: all 0.25s cubic-bezier(0.6, 0.2, 0.1, 1);
+        &:hover {
+            box-shadow: 0 0 50px * 1.25 rgba(0, 0, 0, 0.2);
+            transform: translateY(-0.125rem);
+        }
+        max-width: 75%;
+        margin: 1rem auto;
+        padding: 1rem;
         border-radius: $border--radius;
     }
 
     .entry {
-        .anchor {
-        }
         .content {
             .phrase {
                 font-weight: bold;
