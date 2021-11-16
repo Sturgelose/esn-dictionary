@@ -2,6 +2,8 @@
     import Navbar from '../components/Navbar.svelte'
     import Welcome from '../components/Welcome.svelte'
     import Dictionary from '../components/Dictionary.svelte'
+
+    export const prerender = true;
 </script>
 
 <template>
