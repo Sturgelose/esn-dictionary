@@ -1,24 +1,16 @@
-# create-svelte
+# ESN Dictionary
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte);
+Ever wondered what all those abbreviations and phrases used in ESN mean? Explore the ESNdictionary!
 
-## Creating a project
+## Adding more entries
 
-If you're seeing this, you've probably already done this step. Congrats!
+Update the GoogleSheets from where this app pulls data.
 
-```bash
-# create a new project in the current directory
-npm init svelte@next
-
-# create a new project in my-app
-npm init svelte@next my-app
-```
-
-> Note: the `@next` is temporary
+**Note:** it is being discussed to store all the data in this repo for easier management. If this is done, we will explain here the procedure
 
 ## Developing
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+Once you've cloned the repository with git and installed dependencies with `npm install`, start a development server:
 
 ```bash
 npm run dev
@@ -29,10 +21,12 @@ npm run dev -- --open
 
 ## Building
 
-Before creating a production version of your app, install an [adapter](https://kit.svelte.dev/docs#adapters) for your target environment. Then:
-
 ```bash
 npm run build
 ```
 
-> You can preview the built app with `npm run preview`, regardless of whether you installed an adapter. This should _not_ be used to serve your app in production.
+## Deploying a new version
+
+Either run `npm run deploy` and this will build and deploy a new version in GitHub Pages
+
+Otherwise, any merge or commit into master will trigger a GitHub Action and deploy the code for you!
