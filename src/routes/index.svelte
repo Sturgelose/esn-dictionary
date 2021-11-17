@@ -13,5 +13,5 @@
 </template>
 
 <style lang="scss" global>
-    @import 'static/styles/index';
+    @import 'src/styles/index';
 </style>

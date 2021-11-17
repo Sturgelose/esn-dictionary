@@ -12,6 +12,10 @@
                     animateScroll.scrollTo({
                         element: '#anchor-' + char.toLowerCase(),
                     })}
+                on:focus={() =>
+                    animateScroll.scrollTo({
+                        element: '#anchor-' + char.toLowerCase(),
+                    })}
             >
                 {char}
             </div>

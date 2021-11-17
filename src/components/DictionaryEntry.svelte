@@ -8,7 +8,7 @@
     <div>
         <div class="entry card animate">
             <div class="content">
-                <p class="h6">{entry.term1}</p>
+                <p class="phrase">{entry.term1}</p>
                 <p class="entries2">{entry.term2}</p>
                 <p class="type">{entry.category}</p>
                 <p class="grammar">{entry.grammar}</p>
